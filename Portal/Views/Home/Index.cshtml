@@ -1,0 +1,60 @@
+﻿@model InformationsViewModel
+
+@{
+    ViewData["Title"] = "Portal do Tempo";
+}
+
+@using (Html.BeginForm(FormMethod.Get))
+{
+    <div class="row">
+        <div class="jumbotron">
+            <h3>Random Key Generator</h3>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Key informations</h3>
+            </div>
+            <div class="panel-body">
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.Date)</b>
+                    @Html.DisplayTextFor(p => p.Date)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.Key)</b>
+                    @Html.DisplayTextFor(p => p.Key)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.Sum)</b>
+                    @Html.DisplayTextFor(p => p.Sum)
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Memory Information</h3>
+            </div>
+            <div class="panel-body">
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.GC0)</b>
+                    @Html.DisplayTextFor(p => p.GC0)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.GC1)</b>
+                    @Html.DisplayTextFor(p => p.GC1)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.GC2)</b>
+                    @Html.DisplayTextFor(p => p.GC2)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.CurrentMemory)</b>
+                    @Html.DisplayTextFor(p => p.CurrentMemory)
+                </div>
+                <div class="well">
+                    <b>@Html.LabelFor(p => p.PrivateBytes)</b>
+                    @Html.DisplayTextFor(p => p.PrivateBytes)
+                </div>
+            </div>
+        </div>
+    </div>
+}
